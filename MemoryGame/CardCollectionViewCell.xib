@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="card_reuse_id" id="CU5-U8-h1e" customClass="CardCollectionViewCell" customModule="MemoryGame" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="173" height="279"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="173" height="279"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cardBack" translatesAutoresizingMaskIntoConstraints="NO" id="8jj-4s-W0O">
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="8jj-4s-W0O" secondAttribute="height" multiplier="1:1" id="Oxt-TG-BCI"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="8jj-4s-W0O" firstAttribute="top" secondItem="CU5-U8-h1e" secondAttribute="top" id="VOS-ke-guf"/>
+                <constraint firstItem="8jj-4s-W0O" firstAttribute="leading" secondItem="CU5-U8-h1e" secondAttribute="leading" id="j2g-ls-Y6j"/>
+                <constraint firstAttribute="trailing" secondItem="8jj-4s-W0O" secondAttribute="trailing" id="ykX-ss-phz"/>
+            </constraints>
+            <size key="customSize" width="173" height="279"/>
+            <connections>
+                <outlet property="cardView" destination="8jj-4s-W0O" id="yqa-Dp-JHv"/>
+            </connections>
+            <point key="canvasLocation" x="13.5" y="-78.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="cardBack" width="420" height="420"/>
+    </resources>
+</document>

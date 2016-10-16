@@ -8,12 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		DA29B7871DB257B700B19D65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA29B7861DB257B700B19D65 /* AppDelegate.swift */; };
-		DA29B7891DB257B700B19D65 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA29B7881DB257B700B19D65 /* ViewController.swift */; };
+		DA29B7891DB257B700B19D65 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA29B7881DB257B700B19D65 /* LandingViewController.swift */; };
 		DA29B78C1DB257B700B19D65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA29B78A1DB257B700B19D65 /* Main.storyboard */; };
 		DA29B78E1DB257B700B19D65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA29B78D1DB257B700B19D65 /* Assets.xcassets */; };
 		DA29B7911DB257B700B19D65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA29B78F1DB257B700B19D65 /* LaunchScreen.storyboard */; };
 		DA29B79C1DB257B700B19D65 /* MemoryGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA29B79B1DB257B700B19D65 /* MemoryGameTests.swift */; };
 		DA29B7A71DB257B700B19D65 /* MemoryGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA29B7A61DB257B700B19D65 /* MemoryGameUITests.swift */; };
+		DA7E335C1DB38145003C932A /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E335B1DB38145003C932A /* CardCollectionViewCell.swift */; };
+		DA7E335E1DB3846E003C932A /* CardCollectionViewDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E335D1DB3846E003C932A /* CardCollectionViewDataManager.swift */; };
+		DA7E33601DB38535003C932A /* CardCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E335F1DB38535003C932A /* CardCollectionView.swift */; };
+		DA7E33631DB38615003C932A /* CardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA7E33621DB38615003C932A /* CardCollectionViewCell.xib */; };
+		DA7E33651DB388CB003C932A /* CardCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E33641DB388CB003C932A /* CardCollectionViewLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +41,7 @@
 /* Begin PBXFileReference section */
 		DA29B7831DB257B700B19D65 /* MemoryGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoryGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA29B7861DB257B700B19D65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DA29B7881DB257B700B19D65 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DA29B7881DB257B700B19D65 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
 		DA29B78B1DB257B700B19D65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DA29B78D1DB257B700B19D65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA29B7901DB257B700B19D65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +52,11 @@
 		DA29B7A21DB257B700B19D65 /* MemoryGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemoryGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA29B7A61DB257B700B19D65 /* MemoryGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGameUITests.swift; sourceTree = "<group>"; };
 		DA29B7A81DB257B700B19D65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA7E335B1DB38145003C932A /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
+		DA7E335D1DB3846E003C932A /* CardCollectionViewDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCollectionViewDataManager.swift; sourceTree = "<group>"; };
+		DA7E335F1DB38535003C932A /* CardCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCollectionView.swift; sourceTree = "<group>"; };
+		DA7E33621DB38615003C932A /* CardCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardCollectionViewCell.xib; sourceTree = "<group>"; };
+		DA7E33641DB388CB003C932A /* CardCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCollectionViewLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +108,12 @@
 			isa = PBXGroup;
 			children = (
 				DA29B7861DB257B700B19D65 /* AppDelegate.swift */,
-				DA29B7881DB257B700B19D65 /* ViewController.swift */,
+				DA29B7881DB257B700B19D65 /* LandingViewController.swift */,
 				DA29B78A1DB257B700B19D65 /* Main.storyboard */,
+				DA7E335F1DB38535003C932A /* CardCollectionView.swift */,
+				DA7E335D1DB3846E003C932A /* CardCollectionViewDataManager.swift */,
+				DA7E33641DB388CB003C932A /* CardCollectionViewLayout.swift */,
+				DA7E33611DB385FC003C932A /* CardViewCell */,
 				DA29B78D1DB257B700B19D65 /* Assets.xcassets */,
 				DA29B78F1DB257B700B19D65 /* LaunchScreen.storyboard */,
 				DA29B7921DB257B700B19D65 /* Info.plist */,
@@ -123,6 +137,15 @@
 				DA29B7A81DB257B700B19D65 /* Info.plist */,
 			);
 			path = MemoryGameUITests;
+			sourceTree = "<group>";
+		};
+		DA7E33611DB385FC003C932A /* CardViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				DA7E335B1DB38145003C932A /* CardCollectionViewCell.swift */,
+				DA7E33621DB38615003C932A /* CardCollectionViewCell.xib */,
+			);
+			name = CardViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +258,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA7E33631DB38615003C932A /* CardCollectionViewCell.xib in Resources */,
 				DA29B7911DB257B700B19D65 /* LaunchScreen.storyboard in Resources */,
 				DA29B78E1DB257B700B19D65 /* Assets.xcassets in Resources */,
 				DA29B78C1DB257B700B19D65 /* Main.storyboard in Resources */,
@@ -262,7 +286,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA29B7891DB257B700B19D65 /* ViewController.swift in Sources */,
+				DA7E335E1DB3846E003C932A /* CardCollectionViewDataManager.swift in Sources */,
+				DA7E33601DB38535003C932A /* CardCollectionView.swift in Sources */,
+				DA29B7891DB257B700B19D65 /* LandingViewController.swift in Sources */,
+				DA7E335C1DB38145003C932A /* CardCollectionViewCell.swift in Sources */,
+				DA7E33651DB388CB003C932A /* CardCollectionViewLayout.swift in Sources */,
 				DA29B7871DB257B700B19D65 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,7 +386,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -402,7 +430,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -514,6 +542,7 @@
 				DA29B7AD1DB257B700B19D65 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DA29B7AE1DB257B700B19D65 /* Build configuration list for PBXNativeTarget "MemoryGameTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +551,7 @@
 				DA29B7B01DB257B700B19D65 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DA29B7B11DB257B700B19D65 /* Build configuration list for PBXNativeTarget "MemoryGameUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +560,7 @@
 				DA29B7B31DB257B700B19D65 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
