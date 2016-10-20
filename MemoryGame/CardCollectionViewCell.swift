@@ -11,11 +11,11 @@ import UIKit
 final class CardCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var cardView: UIImageView!
-    internal var cardID: String = ""
+    internal var cardID: String = "cardBack"
     internal var tapped: Bool! {
         didSet{
             if tapped ?? false {
-                cardView.image = UIImage(named: "cardFront")
+                cardView.image = UIImage(named: "cardFront"  + cardID)
             }else {
                 cardView.image = UIImage(named: "cardBack")
             }
@@ -26,6 +26,5 @@ final class CardCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         tapped = false
         paired = false
-        
     }
 }

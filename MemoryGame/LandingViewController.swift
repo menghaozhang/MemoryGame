@@ -16,6 +16,7 @@ final class LandingViewController: UIViewController {
     }
     private let cardViewCellDataManager = CardCollectionViewDataManager()
     private let cardCollectionViewLayout = CardCollectionViewLayout()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

@@ -9,11 +9,12 @@
 import UIKit
 
 final class CardCollectionViewDataManager: NSObject, UICollectionViewDelegate, UICollectionViewDataSource {
-    
+    private var array: [Int]! = [1,2,3,4,3,4,4,2,1,1,3,2,4,2,1,3]
     private var previousSelectedCell: CardCollectionViewCell?
     
     private struct Constants {
         static let numberOfSections = 1
+        static let messageViewAutoDismissDuration: Double = 1
     }
     
     internal func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -21,11 +22,12 @@ final class CardCollectionViewDataManager: NSObject, UICollectionViewDelegate, U
     }
     
     internal func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        return 16
     }
     
     internal func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "card_reuse_id", for: indexPath) as! CardCollectionViewCell
+            cell.cardID = String(array[indexPath.row])
         return cell
     }
     
@@ -35,6 +37,9 @@ final class CardCollectionViewDataManager: NSObject, UICollectionViewDelegate, U
     }
     
     private func handleCellSelect(currentSelectedCell: CardCollectionViewCell) {
+        if currentSelectedCell.paired ?? false {
+            return
+        }
         if let previousCell = previousSelectedCell, previousCell != currentSelectedCell {
             currentSelectedCell.tapped = true
             previousSelectedCell = nil
@@ -43,18 +48,18 @@ final class CardCollectionViewDataManager: NSObject, UICollectionViewDelegate, U
                 currentSelectedCell.paired = true
                 print("match!!!")
             }else {
-                currentSelectedCell.tapped = false
-                previousCell.tapped = false
+                let delayTime = DispatchTime.now() + Constants.messageViewAutoDismissDuration
+                DispatchQueue.main.asyncAfter(deadline: delayTime) {
+                    currentSelectedCell.tapped = false
+                    previousCell.tapped = false
+                }
+                
             }
         }else {
             currentSelectedCell.tapped = true
             previousSelectedCell = currentSelectedCell
         }
     }
-    
-    
-    
-    
 }
 
 
