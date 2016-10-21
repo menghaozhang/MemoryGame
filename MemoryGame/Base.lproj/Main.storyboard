@@ -39,6 +39,7 @@
                                     <constraint firstItem="2wR-mx-eR9" firstAttribute="centerY" secondItem="fBh-sK-rld" secondAttribute="centerY" id="LOF-gn-OfP"/>
                                     <constraint firstItem="29V-6J-hhd" firstAttribute="leading" secondItem="fBh-sK-rld" secondAttribute="leading" constant="20" symbolic="YES" id="LWD-Dy-4If"/>
                                     <constraint firstItem="29V-6J-hhd" firstAttribute="centerY" secondItem="fBh-sK-rld" secondAttribute="centerY" id="d4X-Qj-hrh"/>
+                                    <constraint firstItem="2wR-mx-eR9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="29V-6J-hhd" secondAttribute="trailing" constant="10" id="sOO-Ol-AHY"/>
                                     <constraint firstAttribute="height" constant="80" id="tJl-Id-hF6"/>
                                 </constraints>
                             </view>
