@@ -7,7 +7,8 @@
 //
 
 import UIKit
-
+/* custom colleciton view cell for game view
+ */
 final class CardCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var cardView: UIImageView!

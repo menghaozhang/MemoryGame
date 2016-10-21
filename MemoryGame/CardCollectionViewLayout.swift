@@ -7,7 +7,22 @@
 //
 
 import UIKit
-
-class CardCollectionViewLayout: UICollectionViewLayout {
-
+/* For future usage. If there is a need for different layout
+ */
+final class CardCollectionViewLayout: UICollectionViewFlowLayout {
+    
+    private struct Constants {
+        static let cellWidth: CGFloat = 100
+        static let cellLength: CGFloat = 100
+    }
+        
+    override init() {
+        super.init()
+        itemSize = CGSize(width: Constants.cellWidth, height: Constants.cellLength)
+        scrollDirection = .vertical
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }

@@ -7,7 +7,8 @@
 //
 
 import UIKit
-
+/* Data source and delegate for game view
+ */
 final class CardCollectionViewDataManager: NSObject, UICollectionViewDelegate, UICollectionViewDataSource {
     private var array: [Int]! = [1,2,3,4,3,4,4,2,1,1,3,2,4,2,1,3]
     private var previousSelectedCell: CardCollectionViewCell?

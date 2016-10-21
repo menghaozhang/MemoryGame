@@ -7,22 +7,27 @@
 //
 
 import UIKit
+import CoreGraphics
 
+/* UIViewController subclass which renders game view.
+ */
 final class LandingViewController: UIViewController {
-    @IBOutlet weak var gameView: CardCollectionView! {
-        didSet{
-            gameView.register(UINib(nibName: "CardCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "card_reuse_id")
-        }
-    }
+    
+    private var gameView: CardCollectionView!
     private let cardViewCellDataManager = CardCollectionViewDataManager()
     private let cardCollectionViewLayout = CardCollectionViewLayout()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-//        gameView.collectionViewLayout = cardCollectionViewLayout
+        
+        gameView = CardCollectionView(frame: CGRect.zero, collectionViewLayout: CardCollectionViewLayout())
+        view.addSubview(gameView)
+        
         gameView.dataSource = cardViewCellDataManager
         gameView.delegate = cardViewCellDataManager
+        gameView.backgroundColor = .white
+        
+        layoutGameView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,5 +35,12 @@ final class LandingViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    private func layoutGameView() {
+        gameView.translatesAutoresizingMaskIntoConstraints = false
+        view.topAnchor.constraint(equalTo: gameView.topAnchor).isActive = true
+        view.leadingAnchor.constraint(equalTo: gameView.leadingAnchor).isActive = true
+        view.trailingAnchor.constraint(equalTo: gameView.trailingAnchor).isActive = true
+        view.bottomAnchor.constraint(equalTo: gameView.bottomAnchor).isActive = true
+    }
 }
 

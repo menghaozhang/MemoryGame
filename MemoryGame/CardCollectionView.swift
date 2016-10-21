@@ -7,8 +7,9 @@
 //
 
 import UIKit
-
-class CardCollectionView: UICollectionView {
+/* Collection view for the game
+ */
+final class CardCollectionView: UICollectionView, UICollectionViewDelegateFlowLayout {
 
     /*
     // Only override draw() if you perform custom drawing.
@@ -23,5 +24,6 @@ class CardCollectionView: UICollectionView {
     
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         super.init(frame: frame, collectionViewLayout: layout)
-    }
+        register(UINib(nibName: "CardCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "card_reuse_id")
+    }    
 }
