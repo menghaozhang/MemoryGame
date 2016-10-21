@@ -12,8 +12,8 @@ import UIKit
 final class CardCollectionViewLayout: UICollectionViewFlowLayout {
     
     private struct Constants {
-        static let cellWidth: CGFloat = 100
-        static let cellLength: CGFloat = 100
+        static let cellWidth: CGFloat = 80
+        static let cellLength: CGFloat = 80
     }
         
     override init() {
