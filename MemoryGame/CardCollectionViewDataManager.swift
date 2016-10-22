@@ -7,10 +7,11 @@
 //
 
 import UIKit
-/* Data source and delegate for game view
+/**
+ Data source and delegate for game view
  */
 final class CardCollectionViewDataManager: NSObject, UICollectionViewDelegate, UICollectionViewDataSource {
-    internal var array: [Int]! = [1,1,1,1,2,2,2,2,3,3,3,3,4,4,4,4]
+    internal var array: [Int]! = [1,1,1,1,2,2,2,2,3,3,3,3,4,4,4,4,5,5,5,5]
     private var previousSelectedCell: CardCollectionViewCell?
     
     private struct Constants {
@@ -23,7 +24,7 @@ final class CardCollectionViewDataManager: NSObject, UICollectionViewDelegate, U
     }
     
     internal func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 16
+        return array.count
     }
     
     internal func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

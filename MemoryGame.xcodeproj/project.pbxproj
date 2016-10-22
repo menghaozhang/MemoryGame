@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		DA02D31E1DBB865D00EB5449 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA02D31D1DBB865D00EB5449 /* Extensions.swift */; };
+		DA02D3201DBB8DC600EB5449 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA02D31F1DBB8DC600EB5449 /* Helpers.swift */; };
+		DA02D3221DBB8FFB00EB5449 /* ItemSizeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA02D3211DBB8FFB00EB5449 /* ItemSizeCalculator.swift */; };
+		DA02D3241DBB90AC00EB5449 /* SizeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA02D3231DBB90AC00EB5449 /* SizeCalculator.swift */; };
 		DA29B7871DB257B700B19D65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA29B7861DB257B700B19D65 /* AppDelegate.swift */; };
 		DA29B7891DB257B700B19D65 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA29B7881DB257B700B19D65 /* LandingViewController.swift */; };
 		DA29B78C1DB257B700B19D65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA29B78A1DB257B700B19D65 /* Main.storyboard */; };
@@ -41,6 +44,9 @@
 
 /* Begin PBXFileReference section */
 		DA02D31D1DBB865D00EB5449 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		DA02D31F1DBB8DC600EB5449 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		DA02D3211DBB8FFB00EB5449 /* ItemSizeCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemSizeCalculator.swift; sourceTree = "<group>"; };
+		DA02D3231DBB90AC00EB5449 /* SizeCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizeCalculator.swift; sourceTree = "<group>"; };
 		DA29B7831DB257B700B19D65 /* MemoryGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoryGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA29B7861DB257B700B19D65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA29B7881DB257B700B19D65 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +92,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA02D3251DBB90D500EB5449 /* Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				DA02D3211DBB8FFB00EB5449 /* ItemSizeCalculator.swift */,
+				DA02D3231DBB90AC00EB5449 /* SizeCalculator.swift */,
+			);
+			name = Calculator;
+			sourceTree = "<group>";
+		};
 		DA29B77A1DB257B700B19D65 = {
 			isa = PBXGroup;
 			children = (
@@ -115,7 +130,9 @@
 				DA7E335F1DB38535003C932A /* CardCollectionView.swift */,
 				DA7E335D1DB3846E003C932A /* CardCollectionViewDataManager.swift */,
 				DA7E33641DB388CB003C932A /* CardCollectionViewLayout.swift */,
+				DA02D3251DBB90D500EB5449 /* Calculator */,
 				DA02D31D1DBB865D00EB5449 /* Extensions.swift */,
+				DA02D31F1DBB8DC600EB5449 /* Helpers.swift */,
 				DA7E33611DB385FC003C932A /* CardViewCell */,
 				DA29B78D1DB257B700B19D65 /* Assets.xcassets */,
 				DA29B78F1DB257B700B19D65 /* LaunchScreen.storyboard */,
@@ -291,10 +308,13 @@
 			files = (
 				DA7E335E1DB3846E003C932A /* CardCollectionViewDataManager.swift in Sources */,
 				DA7E33601DB38535003C932A /* CardCollectionView.swift in Sources */,
+				DA02D3221DBB8FFB00EB5449 /* ItemSizeCalculator.swift in Sources */,
 				DA29B7891DB257B700B19D65 /* LandingViewController.swift in Sources */,
+				DA02D3201DBB8DC600EB5449 /* Helpers.swift in Sources */,
 				DA7E335C1DB38145003C932A /* CardCollectionViewCell.swift in Sources */,
 				DA7E33651DB388CB003C932A /* CardCollectionViewLayout.swift in Sources */,
 				DA29B7871DB257B700B19D65 /* AppDelegate.swift in Sources */,
+				DA02D3241DBB90AC00EB5449 /* SizeCalculator.swift in Sources */,
 				DA02D31E1DBB865D00EB5449 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

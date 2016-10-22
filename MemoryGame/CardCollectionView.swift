@@ -7,7 +7,8 @@
 //
 
 import UIKit
-/* Collection view for the game
+/**
+ Collection view for the game
  */
 final class CardCollectionView: UICollectionView, UICollectionViewDelegateFlowLayout {
 

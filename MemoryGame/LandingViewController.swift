@@ -9,7 +9,8 @@
 import UIKit
 import CoreGraphics
 
-/* UIViewController subclass which renders game view.
+/**
+ UIViewController subclass which renders game view.
  */
 final class LandingViewController: UIViewController {
     
@@ -42,7 +43,7 @@ final class LandingViewController: UIViewController {
     }
     
     private func setUpGame() {
-        gameView = CardCollectionView(frame: CGRect.zero, collectionViewLayout: CardCollectionViewLayout())
+        gameView = CardCollectionView(frame: CGRect.zero, collectionViewLayout: cardCollectionViewLayout)
         view.addSubview(gameView!)
         cardViewCellDataManager.array = cardViewCellDataManager.array.shuffled()
         
