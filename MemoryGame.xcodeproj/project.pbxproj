@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA02D31E1DBB865D00EB5449 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA02D31D1DBB865D00EB5449 /* Extensions.swift */; };
 		DA29B7871DB257B700B19D65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA29B7861DB257B700B19D65 /* AppDelegate.swift */; };
 		DA29B7891DB257B700B19D65 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA29B7881DB257B700B19D65 /* LandingViewController.swift */; };
 		DA29B78C1DB257B700B19D65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA29B78A1DB257B700B19D65 /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA02D31D1DBB865D00EB5449 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		DA29B7831DB257B700B19D65 /* MemoryGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoryGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA29B7861DB257B700B19D65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA29B7881DB257B700B19D65 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				DA7E335F1DB38535003C932A /* CardCollectionView.swift */,
 				DA7E335D1DB3846E003C932A /* CardCollectionViewDataManager.swift */,
 				DA7E33641DB388CB003C932A /* CardCollectionViewLayout.swift */,
+				DA02D31D1DBB865D00EB5449 /* Extensions.swift */,
 				DA7E33611DB385FC003C932A /* CardViewCell */,
 				DA29B78D1DB257B700B19D65 /* Assets.xcassets */,
 				DA29B78F1DB257B700B19D65 /* LaunchScreen.storyboard */,
@@ -292,6 +295,7 @@
 				DA7E335C1DB38145003C932A /* CardCollectionViewCell.swift in Sources */,
 				DA7E33651DB388CB003C932A /* CardCollectionViewLayout.swift in Sources */,
 				DA29B7871DB257B700B19D65 /* AppDelegate.swift in Sources */,
+				DA02D31E1DBB865D00EB5449 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

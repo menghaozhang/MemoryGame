@@ -10,7 +10,7 @@ import UIKit
 /* Data source and delegate for game view
  */
 final class CardCollectionViewDataManager: NSObject, UICollectionViewDelegate, UICollectionViewDataSource {
-    private var array: [Int]! = [1,2,3,4,3,4,4,2,1,1,3,2,4,2,1,3]
+    internal var array: [Int]! = [1,1,1,1,2,2,2,2,3,3,3,3,4,4,4,4]
     private var previousSelectedCell: CardCollectionViewCell?
     
     private struct Constants {
@@ -28,7 +28,7 @@ final class CardCollectionViewDataManager: NSObject, UICollectionViewDelegate, U
     
     internal func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "card_reuse_id", for: indexPath) as! CardCollectionViewCell
-            cell.cardID = String(array[indexPath.row])
+            cell.cardID = String(array[indexPath.item])
         return cell
     }
     

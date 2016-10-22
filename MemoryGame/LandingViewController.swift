@@ -44,13 +44,13 @@ final class LandingViewController: UIViewController {
     private func setUpGame() {
         gameView = CardCollectionView(frame: CGRect.zero, collectionViewLayout: CardCollectionViewLayout())
         view.addSubview(gameView!)
+        cardViewCellDataManager.array = cardViewCellDataManager.array.shuffled()
         
         gameView?.dataSource = cardViewCellDataManager
         gameView?.delegate = cardViewCellDataManager
         gameView?.backgroundColor = .white
         
         layoutGameView()
-
     }
     
     private func layoutGameView() {
