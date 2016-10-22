@@ -11,7 +11,9 @@ import UIKit
  Data source and delegate for game view
  */
 final class CardCollectionViewDataManager: NSObject, UICollectionViewDelegate, UICollectionViewDataSource {
+    // TODO: change this to a graceful way
     internal var array: [Int]! = [1,1,1,1,2,2,2,2,3,3,3,3,4,4,4,4,5,5,5,5]
+    internal var fliped = Array(repeating: false, count: 20)
     private var previousSelectedCell: CardCollectionViewCell?
     
     private struct Constants {
@@ -30,32 +32,36 @@ final class CardCollectionViewDataManager: NSObject, UICollectionViewDelegate, U
     internal func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "card_reuse_id", for: indexPath) as! CardCollectionViewCell
             cell.cardID = String(array[indexPath.item])
+            cell.tapped = fliped[indexPath.item]
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = collectionView.cellForItem(at: indexPath) as! CardCollectionViewCell
-        handleCellSelect(currentSelectedCell: cell)
+        handleCellSelect(collectionView: collectionView, indexPath: indexPath)
     }
     
-    private func handleCellSelect(currentSelectedCell: CardCollectionViewCell) {
-        if currentSelectedCell.paired ?? false {
+    private func handleCellSelect(collectionView: UICollectionView, indexPath: IndexPath) {
+        let currentSelectedCell = collectionView.cellForItem(at: indexPath) as! CardCollectionViewCell
+        guard !currentSelectedCell.paired else {
             return
         }
+        fliped[indexPath.item] = true
         if let previousCell = previousSelectedCell, previousCell != currentSelectedCell {
             currentSelectedCell.tapped = true
             previousSelectedCell = nil
             if previousCell.cardID == currentSelectedCell.cardID {
                 previousCell.paired = true
                 currentSelectedCell.paired = true
+                
                 print("match!!!")
             }else {
+                fliped[(collectionView.indexPath(for: previousCell)!.item)] = false
+                fliped[(collectionView.indexPath(for: currentSelectedCell)!.item)] = false
                 let delayTime = DispatchTime.now() + Constants.messageViewAutoDismissDuration
                 DispatchQueue.main.asyncAfter(deadline: delayTime) {
                     currentSelectedCell.tapped = false
                     previousCell.tapped = false
                 }
-                
             }
         }else {
             currentSelectedCell.tapped = true
