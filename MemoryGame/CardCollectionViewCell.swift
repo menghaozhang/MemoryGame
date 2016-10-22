@@ -12,7 +12,7 @@ import UIKit
 final class CardCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var cardView: UIImageView!
-    internal var cardID: String = "cardBack"
+    internal var cardID: String = ""
     internal var tapped: Bool! {
         didSet{
             if tapped ?? false {
