@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreGraphics
+import 
 
 /**
  UIViewController subclass which renders game view.
@@ -29,6 +30,44 @@ final class LandingViewController: UIViewController {
         super.viewDidLoad()
             cleanUpGame()
             setUpGame()
+        self.request = Alamofire.request(.GET, "http://www.bbc.co.uk/radio1/playlist.json", headers: genericRemoteService.headers()).response { [weak self] (request, response, data, error) in
+//
+//            guard let strongSelf = self else {
+//                MessageDispatcherFactory.messageDispatcher().dispatchMessage(InternalMessage.netWorkError())
+//                completion(page: nil, error: nil)
+//                return
+//            }
+//            
+//            guard error == nil else {
+//                strongSelf.genericRemoteService.handleError(error!, errorCode: ErrorCode.Network, api: ErrorFacility.ContentApi, view: DimensionView.PageController)
+//                strongSelf.genericRemoteService.removeProgressIndicator()
+//                strongSelf.genericRemoteService.dispatchLoadingError(error! as NSError)
+//                completion(page: nil, error: error)
+//                return
+//            }
+//            
+//            if let validData = data , validData.length > 0 {
+//                let content: Content?
+//                do {
+//                    try content = Content.parseFromData(validData)
+//                    
+//                    if let contentData = content {
+//                        let page = Constants.protoBufferParser.parse(contentData)
+//                        strongSelf.genericRemoteService.removeProgressIndicator()
+//                        completion(page: page, error: nil)
+//                    }
+//                } catch _ {
+//                    let parseError = NSError(domain: Constants.parseError, code: Constants.ErrorCodeCannotParseResponse, userInfo: nil)
+//                    strongSelf.genericRemoteService.dispatchLoadingError(parseError)
+//                    strongSelf.genericRemoteService.handleError(parseError, errorCode: ErrorCode.InvalidResponse, api: ErrorFacility.ContentApi, view: DimensionView.PageController)
+//                    strongSelf.genericRemoteService.removeProgressIndicator()
+//                    completion(page: nil, error: nil)
+//                }
+//            } else {
+//                strongSelf.genericRemoteService.handleInvalidDataError(.ContentApi)
+//                completion(page: nil, error: nil)
+//            }
+//        }
         }
 
     override func didReceiveMemoryWarning() {
